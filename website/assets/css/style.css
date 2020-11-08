@@ -1,15 +1,9 @@
-/**
-* Template Name: Techie - v2.1.0
-* Template URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Nunito',sans-serif;
+  font-size: 15px;
   color: #444444;
 }
 
@@ -18,7 +12,7 @@ a {
 }
 
 a:hover {
-  color: #8577fb;
+  color: #5CCAFA;
   text-decoration: none;
 }
 
