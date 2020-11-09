@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled, #header.header-inner-pages {
-  background: rgba(24, 6, 185, 0.8);
+  background: rgba(92, 202, 250, 1);
   padding: 12px 0;
 }
 
@@ -558,6 +558,7 @@ section {
   bottom: 0;
   left: calc(50% - 25px);
 }
+
 
 .section-title p {
   margin-bottom: 0;
