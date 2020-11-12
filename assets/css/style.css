@@ -1127,7 +1127,7 @@ section {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 .faq {
-  background: linear-gradient(42deg,#5CCAFA 0%, #7b27d8 100%);
+  background: linear-gradient(42deg, #5CCAFA 0%, #0687be 100%);
 }
 
 .faq .section-title h2, .faq .section-title p {
@@ -1161,8 +1161,8 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
   line-height: 24px;
   font-weight: 500;
   padding: 0 30px;
@@ -1170,11 +1170,11 @@ section {
 }
 
 .faq .faq-list .icon-help {
-  font-size: 24px;
+  font-size: 29px;
   position: absolute;
   right: 0;
   left: 20px;
-  color: #8577fb;
+  color: #00405c;
 }
 
 .faq .faq-list .icon-show, .faq .faq-list .icon-close {
@@ -1185,6 +1185,7 @@ section {
 }
 
 .faq .faq-list p {
+  font-size: larger;
   margin-bottom: 0;
   padding: 10px 0 0 0;
 }
