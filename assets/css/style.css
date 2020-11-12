@@ -606,12 +606,12 @@ section {
   border-radius: 5px;
   transition: 0.5s;
   color: #fff;
-  background: linear-gradient(45deg,#5CCAFA 0%, #7b27d8 100%);
+  background: linear-gradient(45deg, #5CCAFA 0%, #00648f 100%);
   position: relative;
 }
 
 .about .content .read-more:hover {
-  background: linear-gradient(180deg,#5CCAFA 0%, #7b27d8 100%);
+  background: linear-gradient(180deg, #5CCAFA 0%, #00648f 100%);
 }
 
 .about .content .read-more i {
