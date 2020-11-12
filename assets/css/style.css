@@ -2,7 +2,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Nunito',sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 18px;
   color: #444444;
 }
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top i:hover {
-  background: #7b27d8;
+  background: #004b6b;
   color: #fff;
 }
 
