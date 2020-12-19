@@ -8,20 +8,26 @@
   <link rel="stylesheet" href="table.css" />
 </head>
 
-<body>
+<body style="font-family:'Roboto', sans-serif;">
 
   <div id="login_div" class="main-div">
-    <h3>Firebase Web login Example</h3>
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
+    <center>
+      <h1 style="margin-top: 3em; font-size: 2em; color: #0daef2;font-family: Roboto;">Admin Portal - OTG Car Wash Jaipur</h1>
+      <img style="width: 18em;" src="assets/img/logo.png"/>
+      <div class="logdiv">
+        <input type="email" placeholder="Your Email" id="email_field" />
+        <input type="password" placeholder="Password" id="password_field" />
+        <button onclick="login()">Login to Account</button>
+      </div>
+    </center>
 
-    <button onclick="login()">Login to Account</button>
+    
   </div>
 
   <div id="user_div" class="loggedin-div">
    <br/> 
     <center>
-      <table class="styled-table">
+      <table class="styled-table" border=1 frame=hsides rules=rows>
         <thead>
           <h1>Welcome to Admin Dashboard</h1>
           <button class="loggedin-div" onclick="logout()">Log Out</button>
@@ -29,7 +35,7 @@
             <th>Name</th> 
             <th>Contact</th>
             <th>Address</th>
-            <th>amount</th>
+            <th>Amount</th>
             <th>Car Model</th>
             <th>Car Name</th>
             <th>Car Number</th>
@@ -41,17 +47,17 @@
         </thead>
         <tbody>
           <tr>
-            <td id="username"></td> <br/>
-            <td id="contact"></td> <br />
-            <td id="address"></td> <br />
-            <td id="amount"></td> <br />
-            <td id="carModel"></td> <br />
-            <td id="carName"></td> <br />
-            <td id="carNumber"></td> <br />
-            <td id="success"></td> <br />
-            <td id="date"></td> <br />
-            <td id="timestamp"></td> <br />
-            <td id="transactionId"></td> <br />
+            <td id="username"></td> 
+            <td id="contact"></td> 
+            <td id="address"></td> 
+            <td id="amount"></td> 
+            <td id="carModel"></td>
+            <td id="carName"></td> 
+            <td id="carNumber"></td> 
+            <td id="success"></td> 
+            <td id="date"></td> 
+            <td id="timestamp"></td> 
+            <td id="transactionId"></td> 
           </tr>
         </tbody>
       </table>

@@ -6,54 +6,28 @@ const amount = document.getElementById('amount');
 const carModel = document.getElementById('carModel');
 const carName = document.getElementById('carName');
 const carNumber = document.getElementById('carNumber');
-const success = document.getElementById('success');
 const timestamp = document.getElementById('timestamp');
 const date = document.getElementById('date');
-const transactionId = document.getElementById('transactionId')
+const transactionId = document.getElementById('transactionId');
 
+
+var statusValue = false;
 db.collection("portal").onSnapshot(function (querySnapshot) {
     querySnapshot.docChanges().forEach(function(change) {
+        
         if (change.type === "added") {
-            username.innerHTML += change.doc.data().name + "<br/>"
-            contact.innerHTML += change.doc.data().contact + "<br/>"
-            address.innerHTML += change.doc.data().address + "<br/>"
-            amount.innerHTML += change.doc.data().amount/100 + "<br/>"
-            carModel.innerHTML += change.doc.data().carModel + "<br/>"
-            carName.innerHTML += change.doc.data().carName + "<br/>"
-            carNumber.innerHTML += change.doc.data().carNumber + "<br/>"
-            success.innerHTML += change.doc.data().success + "<br/>"
-            date.innerHTML += change.doc.data().timestamp.toDate().toLocaleDateString() + "<br/>";
-            timestamp.innerHTML += change.doc.data().timestamp.toDate().toLocaleTimeString() + "<br/>"
-            transactionId.innerHTML += change.doc.data().transactionId + "<br/>"
+            username.innerHTML += change.doc.data().name + "<br/><br/>"
+            contact.innerHTML += change.doc.data().contact + "<br/><br/>"
+            address.innerHTML += change.doc.data().address + "<br/><br/>"
+            amount.innerHTML += change.doc.data().amount / 100 + "<br/><br/>"
+            carModel.innerHTML += change.doc.data().carModel + "<br/><br/>"
+            carName.innerHTML += change.doc.data().carName + "<br/><br/>"
+            carNumber.innerHTML += change.doc.data().carNumber + "<br/><br/>"
+            success.innerHTML += change.doc.data().success + "<br><br/>"
+            date.innerHTML += change.doc.data().timestamp.toDate().toLocaleDateString() + "<br/><br/>"
+            timestamp.innerHTML += change.doc.data().timestamp.toDate().toLocaleTimeString() + "<br/><br/>"
+            transactionId.innerHTML += change.doc.data().transactionId + "<br/><br/>"
         }
     });
 });
 
-
-
-// db.collection("transcations").doc('qxFHBEinHAToiLEloeVd').collection("allTranscation").get()
-//     .then(querySnapshot => {
-//         querySnapshot.forEach(doc => {
-//             console.log(doc.id, " => ", doc.data());
-//         });
-//     });
-
-
-
-// function namecaller() {
-//     var email = document.getElementById("name").value;
-//     var name = document.getElementById("email").value;
-//     var success = "true";
-// Add a new document in collection "cities"
-//     db.collection("cities").doc().set({
-//             name: name,
-//             email: email,
-//             success: success
-//         })
-//         .then(function () {
-//             console.log("Document successfully written!");
-//         })
-//         .catch(function (error) {
-//             console.error("Error writing document: ", error);
-//         });
-// }
