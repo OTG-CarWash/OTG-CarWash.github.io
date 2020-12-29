@@ -1,0 +1,29 @@
+{
+  "name": "otg-carwash.github.io",
+  "version": "1.0.0",
+  "description": "OTG Car wash Service Jaipur",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OTG-CarWash/OTG-CarWash.github.io.git"
+  },
+  "keywords": [
+    "Car",
+    "Wash",
+    "OTG",
+    "Jaipur",
+    "Startup"
+  ],
+  "author": "OTG Dev Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OTG-CarWash/OTG-CarWash.github.io/issues"
+  },
+  "homepage": "https://github.com/OTG-CarWash/OTG-CarWash.github.io#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.2.2"
+  }
+}

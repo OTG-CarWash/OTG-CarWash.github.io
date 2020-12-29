@@ -1,40 +1,56 @@
 var db = firebase.firestore();
-const username = document.getElementById('username');
-const contact = document.getElementById('contact');
-const address = document.getElementById('address');
-const amount = document.getElementById('amount');
-const carModel = document.getElementById('carModel');
-const carName = document.getElementById('carName');
-const carNumber = document.getElementById('carNumber');
-const timestamp = document.getElementById('timestamp');
-const date = document.getElementById('date');
-const transactionId = document.getElementById('transactionId');
+// var currentDate = Date.now();
+// const table = document.getElementById('data');
 
+// var dates = new Set();
+// var button = document.getElementById('current_date');
+// db.collection("portal").get().then(function (querySnapshot) {
+//     querySnapshot.forEach(function (doc) {
+//         currentDate = doc.data().timestamp.toDate().toLocaleDateString();
+//         if (!dates.has(currentDate)) {
+//             dates.add(currentDate);
+//             button.innerHTML += "<button onclick='' class='btn btn primary'>" + currentDate + "</button> <br/>";
+//         }
+//     });
+// }).catch(function (error) {
+//     console.log("Error getting document:", error);
+// });
 
-var serialValue = document.getElementById('serial').value;
-console.log(serialValue);
-db.collection("portal").onSnapshot(function (querySnapshot) {
-    querySnapshot.docChanges().forEach(function(change) {
-        
+var query = db.collection("portal");
+const table = document.getElementById('data');
+
+// const orderPlaced = document.getElementById('orderPlaced');
+query.onSnapshot(function (querySnapshot) {
+    querySnapshot.docChanges().forEach(function (change) {
+        var orderId = change.doc.data().orderId;
+        var amount = change.doc.data().amount;
+        var orderId = change.doc.data().orderId;
+        var contact = change.doc.data().contact;
+        var address = change.doc.data().address;
+        var carName = change.doc.data().carName;
+        var success = change.doc.data().success;
+        var carModel = change.doc.data().carModel;
+        var username = change.doc.data().name;
+        var carNumber = change.doc.data().carNumber;
+        var timestamp = change.doc.data().timestamp;
+        var transactionId = change.doc.data().transactionId;
+
         if (change.type === "added") {
-            document.getElementById('serial').innerHTML = serialValue + "<br/><br/>"
-            username.innerHTML += change.doc.data().name + "<br/><br/>"
-            contact.innerHTML += change.doc.data().contact + "<br/><br/>"
-            address.innerHTML += change.doc.data().address + "<br/><br/>"
-            amount.innerHTML += change.doc.data().amount / 100 + "<br/><br/>"
-            carModel.innerHTML += change.doc.data().carModel + "<br/><br/>"
-            carName.innerHTML += change.doc.data().carName + "<br/><br/>"
-            carNumber.innerHTML += change.doc.data().carNumber + "<br/><br/>"
-            success.innerHTML += change.doc.data().success + "<br><br/>"
-            console.log(change.doc.data().success);
-            if (change.doc.data().success === "true") {
-                success.style.color = 'red';
-            }
-            date.innerHTML += change.doc.data().timestamp.toDate().toLocaleDateString() + "<br/><br/>"
-            timestamp.innerHTML += change.doc.data().timestamp.toDate().toLocaleTimeString() + "<br/><br/>"
-            transactionId.innerHTML += change.doc.data().transactionId + "<br/><br/>"
-            serialValue += 1;
+            table.innerHTML += "<tr><td>" + orderId + "</td>" +
+                "<td>" + username + "</td>" +
+                "<td>" + contact + "</td>" +
+                "<td>" + address + "</td>" +
+                "<td>" + amount / 100 + "</td>" +
+                "<td>" + carName + "</td>" +
+                "<td>" + carModel + "</td>" +
+                "<td>" + carNumber + "</td>" +
+                "<td>" + timestamp.toDate().toLocaleDateString() + "</td>" +
+                "<td>" + timestamp.toDate().toLocaleTimeString() + "</td>" +
+                "<td>" + transactionId + "</td>" +
+                "<td id='status__id'><status>" + success + "</status></td></tr>";
         }
+        // orderPlaced.innerHTML += change.doc.data().timestamp.toDate().toLocaleDateString() + "<br/>";
     });
 });
+
 
