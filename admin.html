@@ -85,18 +85,12 @@
           <table class="table">
             <thead class="table-dark">
               <tr>
-                <th scope="col">Order ID</th>
+                <th scope="col">Order #</th>
                 <th scope="col">Name</th>
                 <th scope="col">Contact</th>
-                <th scope="col">Address</th>
                 <th scope="col">Amount</th>
-                <th scope="col">Car Name</th>
-                <th scope="col">Car Model</th>
-                <th scope="col">Car Number</th>
                 <th scope="col">Date</th>
-                <th scope="col">Time</th>
-                <th scope="col">Transaction ID</th>
-                <th scope="col">Success</th>
+                <th scope="col">Invoice</th>
               </tr>
             </thead>
             <tbody id="data">
@@ -107,6 +101,78 @@
        </div>
 
     </center>
+  </div>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="inside-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 id="modal-orderid" class="modal-title"></h6>
+            <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row align-items-start">
+                <div class="col">
+                  <h5>ORDER PLACED ON:</h5>
+                  <p id="order-date"></p>
+                  <h5>TIME: </h5>
+                  <p id="order-time"></p>
+                </div>
+                <div class="col">
+                  <h5>CAR NAME:</h5>
+                  <p id="order-carName"></p>
+                  <h5>CAR NUMBER:</h5>
+                  <p id="order-carNumber"></p>
+                </div>
+                <div class="col">
+                  <div style="display: flex;">
+                  <div>PAYMENT STATUS:</div>
+                  <button id="order-status"></button>
+                  </div>
+                  <br/>
+                  <h5>CONTACT:</h5>
+                  <p id="order-contact"></p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5>NAME:</h5>
+                  <p id="order-name"></p>
+                </div>
+                <div class="col">
+                  <h5>CAR MODEL:</h5>
+                  <p id="order-carModel"></p>
+                </div>
+                <div class="col">
+                  <h5>AMOUNT:</h5>
+                  <p id="order-amount"></p>
+                </div>
+              </div>
+              <div class="row align-items-end">
+                <div class="col">
+                  <h5>ADDRESS:</h5>
+                  <p id="order-address"></p>
+                </div>
+                <div class="col">
+                  <h5>PIN CODE:</h5>
+                  <p id="order-pinCode"></p>
+                </div>
+                <div class="col">
+                  <h5>TRANSACTION ID:</h5>
+                  <p id="order-transactionId"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 

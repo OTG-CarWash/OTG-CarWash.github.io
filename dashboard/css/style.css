@@ -2,6 +2,8 @@
 body {
   background: #fff;
   font-family: 'Roboto Mono', monospace;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .logdiv {
