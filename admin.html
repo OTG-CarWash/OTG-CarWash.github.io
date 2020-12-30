@@ -39,7 +39,7 @@
   </div>
 
   <div id="user_div" class="loggedin-div">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
           aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,44 +62,34 @@
     </nav>
     <ul class="list-group">
       <li class="list-group-item">Your Orders</li>
-    </ul>
-    
-       <!-- <div class="page-wrapper">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <div class="card">
-              <p id="orderPlaced" class="card-header">Order Placed: </p>
-              <div class="card-body">
-                <p class="card-title">ORDER #: </p>
-                <a href="#" class="card-button">Go somewhere</a>
-                <p class="card-text"></p>
-                
-              </div>
+      <li class="list-group-item">
+        <p class="alert alert-info ">Press ctrl+F and type in the order ID to search for any particular Order.
+        </p>
+      </li>
+      <li class="list-group-item">
+        <div class="page-wrapper">
+          <center>
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">Order #</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Invoice</th>
+                  </tr>
+                </thead>
+                <tbody id="data">
+
+                </tbody>
+              </table>
             </div>
-          </li>
-        </ul> -->
+        </div>
 
-        <br/>
-        <center>
-         <div class="table-responsive">
-          <table class="table">
-            <thead class="table-dark">
-              <tr>
-                <th scope="col">Order #</th>
-                <th scope="col">Name</th>
-                <th scope="col">Contact</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Date</th>
-                <th scope="col">Invoice</th>
-              </tr>
-            </thead>
-            <tbody id="data">
-              
-            </tbody>
-          </table>
-         </div>
-       </div>
-
+      </li>
+    </ul>
     </center>
   </div>
 
