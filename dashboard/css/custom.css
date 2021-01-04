@@ -45,16 +45,17 @@
   font-size: smaller;
 }
 
-.table-responsive {
-  margin-left: 3em;
-  margin-right: 3em;
+#data {
+  vertical-align: middle;
+  text-align: inherit;
 }
 
-.list-group-item {
-  margin-left: 2em;
-  margin-right: 2em;
-}
 
 .card {
   margin-top: 3em;
+}
+
+#email_field, #password_field {
+  outline: none !important;
+  box-shadow: 0 0 0 0;
 }
