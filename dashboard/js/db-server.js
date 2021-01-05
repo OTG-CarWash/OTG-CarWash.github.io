@@ -1,5 +1,5 @@
 var db = firebase.firestore();
-var query = db.collection("portal");
+var query = db.collection("portal").orderBy("timestamp", "desc");
 const table = document.getElementById('data');
 
 
