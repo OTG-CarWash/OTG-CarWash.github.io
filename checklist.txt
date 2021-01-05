@@ -19,3 +19,7 @@ done    8. why OTG? -> ok symbol in placeholders
 done    9. paste social icons on the front page
 done    10. Powered by bootstrap BootstrapMade
 done    11. Sliding animation in menu nav bar.
+
+
+
+Changes after iteration - 2:

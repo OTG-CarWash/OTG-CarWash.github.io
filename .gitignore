@@ -10,6 +10,13 @@ firebase-debug.*.log*
 # Firebase cache
 .firebase/
 
+
+# node_modules
+node_modules
+
+# website v1
+website-v1
+
 # Firebase config
 
 # Uncomment this if you'd like others to create their own Firebase project.
