@@ -47,6 +47,7 @@ dates.onSnapshot(function (querySnapshot) {
         const obj = array[index];
         fetch(obj.end, obj.id);
     }
+    array.length = 0;
 });
 
 function fetch(d, id) {

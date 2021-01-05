@@ -50,7 +50,6 @@
   text-align: inherit;
 }
 
-
 .card {
   margin-top: 3em;
 }
@@ -58,4 +57,19 @@
 #email_field, #password_field {
   outline: none !important;
   box-shadow: 0 0 0 0;
+}
+
+#order-carName {
+  vertical-align: middle;
+  text-align: inherit;
+}
+
+#mybtn2 {
+  margin-top: 1.5em;
+}
+
+.header-inside {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
 }

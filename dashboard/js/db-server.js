@@ -59,16 +59,15 @@ function display_receipt(userId) {
             querySnapshot.forEach(function (doc) {
                 document.getElementById('modal-orderid').innerHTML = "Invoice details - Order #" + doc.data().orderId;
                 document.getElementById('order-date').innerHTML = doc.data().timestamp.toDate().toLocaleDateString();
-                
+                document.getElementById('order-time').innerHTML = doc.data().timestamp.toDate().toLocaleTimeString();
                 if (doc.data().success === true) {
                     document.getElementById('order-status').innerHTML = "PAID";
-                    document.getElementById('order-status').className = "btn btn-success";
                 } else {
                     document.getElementById('order-status').innerHTML = "&times;";
-                    document.getElementById('order-status').className = "btn btn-danger";
                 }
 
                 document.getElementById('order-name').innerHTML = doc.data().name;
+                document.getElementById('order-id').innerHTML = doc.data().orderId;
                 document.getElementById('order-carName').innerHTML = doc.data().carName;
                 document.getElementById('order-contact').innerHTML = doc.data().contact;
                 document.getElementById('order-address').innerHTML = doc.data().address;
@@ -77,7 +76,8 @@ function display_receipt(userId) {
                 document.getElementById('order-carNumber').innerHTML = doc.data().carNumber;
                 document.getElementById('order-amount').innerHTML = doc.data().amount / 100;
                 document.getElementById('order-transactionId').innerHTML = doc.data().transactionId;
-                document.getElementById('order-time').innerHTML = doc.data().timestamp.toDate().toLocaleTimeString();
+                
+                
             });
         })
         .catch(function (error) {

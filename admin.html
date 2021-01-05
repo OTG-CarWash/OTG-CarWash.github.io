@@ -130,111 +130,93 @@
   <div id="receipt-modal" class="modal">
     <!-- Modal content -->
     <div class="inside-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h6 id="modal-orderid" class="modal-title"></h6>
-            <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-              <div class="container">
-                <div class="row">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item">
-                            <h6> Cras justo odio:</h6>
-                            <p class="values">Name</p>
-                          </li>
-                          <li class="list-group-item">Dapibus ac facilisis in</li>
-                          <li class="list-group-item">Morbi leo risus</li>
-                          <li class="list-group-item">Porta ac consectetur ac</li>
-                          <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                      </div>
-                      
-                      <div class="col-sm">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item">Cras justo odio:
-                            <p>Name</p>
-                          </li>
-                          <li class="list-group-item">Dapibus ac facilisis in</li>
-                          <li class="list-group-item">Morbi leo risus</li>
-                          <li class="list-group-item">Porta ac consectetur ac</li>
-                          <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
+      <div class="header-inside">
+        <h5 id="modal-orderid" class="modal-title"></h5>
+        <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="row">
+        
+        <div class="w-50 col-6">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Order Date
+              <div id="order-date">/div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Order Time
+              <small>
+                <div id="order-time">/div>
+              </small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Order Place By:
+              <small>
+                <div id="order-name">/div>
+              </small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Contact:
+              <small>
+                <div id="order-contact">/div>
+              </small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Address:
+              <small>
+                <div id="order-address">/div>
+              </small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Pin Code:
+              <small>
+                <div id="order-pinCode">/div>
+              </small>
+            </li>
+          </ul>
+        </div>
+        <div class="w-50 col-6">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Car No:
+              <small>
+                <div id="order-carNumber">/div>
+              </small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Car Name:
+              <div class="dbtext">
+                <div id="order-carName">/div>
               </div>
-
-              <style>
-                values {
-                  font-size: smaller;
-                }
-              </style>
-              <!-- <div class="row align-items-start">
-                <div class="col">
-                  <h5>ORDER PLACED ON:</h5>
-                  <p id="order-date"></p>
-                  <h5>TIME: </h5>
-                  <p id="order-time"></p>
-                </div>
-                <div class="col">
-                  <h5>CAR NAME:</h5>
-                  <p id="order-carName"></p>
-                  <h5>CAR NUMBER:</h5>
-                  <p id="order-carNumber"></p>
-                </div>
-                <div class="col">
-                  <div style="display: flex;">
-                  <div>PAYMENT STATUS:</div>
-                  <button id="order-status"></button>
-                  </div>
-                  <br/>
-                  <h5>CONTACT:</h5>
-                  <p id="order-contact"></p>
-                </div>
-              </div>
-              <div class="row align-items-center">
-                <div class="col">
-                  <h5>NAME:</h5>
-                  <p id="order-name"></p>
-                </div>
-                <div class="col">
-                  <h5>CAR MODEL:</h5>
-                  <p id="order-carModel"></p>
-                </div>
-                <div class="col">
-                  <h5>AMOUNT:</h5>
-                  <p id="order-amount"></p>
-                </div>
-              </div>
-              <div class="row align-items-end">
-                <div class="col">
-                  <h5>ADDRESS:</h5>
-                  <p id="order-address"></p>
-                </div>
-                <div class="col">
-                  <h5>PIN CODE:</h5>
-                  <p id="order-pinCode"></p>
-                </div>
-                <div class="col">
-                  <h5>TRANSACTION ID:</h5>
-                  <p id="order-transactionId"></p>
-                </div>
-              </div> -->
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-dark" id='myBtn2'>Assign/Update</button>
-          </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Car Model:
+              <small>
+                <div id="order-carModel">/div>
+              </small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Payment:
+              <small>
+                <div id="order-status">/div>
+              </small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Amount:
+              <small>
+                <div class="dbtext" id="order-amount"></div>
+              </small>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Payment ID:
+              <small>
+                <div id="order-transactionId">/div>
+              </small>
+            </li>
+          </ul>
         </div>
       </div>
+
+      <center><button class="btn btn-dark" id='myBtn2'>Assign/Update</button></center>
     </div>
   </div>
 
@@ -263,6 +245,67 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+  /*
+  <!-- <div class="row align-items-start">
+    <div class="col">
+      <h5>ORDER PLACED ON:</h5>
+      <p id="order-date"></p>
+      <h5>TIME: </h5>
+      <p id="order-time"></p>
+    </div>
+    <div class="col">
+      <h5>CAR NAME:</h5>
+      <p id="order-carName"></p>
+      <h5>CAR NUMBER:</h5>
+      <p id="order-carNumber"></p>
+    </div>
+    <div class="col">
+      <div style="display: flex;">
+      <div>PAYMENT STATUS:</div>
+      <button id="order-status"></button>
+      </div>
+      <br/>
+      <h5>CONTACT:</h5>
+      <p id="order-contact"></p>
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col">
+      <h5>NAME:</h5>
+      <p id="order-name"></p>
+    </div>
+    <div class="col">
+      <h5>CAR MODEL:</h5>
+      <p id="order-carModel"></p>
+    </div>
+    <div class="col">
+      <h5>AMOUNT:</h5>
+      <p id="order-amount"></p>
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col">
+      <h5>ADDRESS:</h5>
+      <p id="order-address"></p>
+    </div>
+    <div class="col">
+      <h5>PIN CODE:</h5>
+      <p id="order-pinCode"></p>
+    </div>
+    <div class="col">
+      <h5>TRANSACTION ID:</h5>
+      <p id="order-transactionId"></p>
+    </div>
+  </div> -->
+  
+  */
 
 
 
