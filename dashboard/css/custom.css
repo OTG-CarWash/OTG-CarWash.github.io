@@ -45,7 +45,7 @@
   font-size: smaller;
 }
 
-#data {
+#data, #dates {
   vertical-align: middle;
   text-align: inherit;
 }

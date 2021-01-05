@@ -1,43 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-
-<head>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js">
-    </script>
-</head>
-
-<body>
-    <div style="width:10em; height:10em; border-style:solid; border-color:black;" id="editor1" contenteditable="true">
-    </div>
-    <button id="savebtn">Save Changes</button>
-    <div style="width:10em; height:5em; border-style:solid; border-color:red;" id="Contentable"></div>
-    <script>
-        var editElem = document.getElementById("editor1");
-        $(document).ready(function () {
-            $("#savebtn").click(function () {
-                var title = prompt("What would you like your title to be?");
-                localStorage.setItem(title, editElem.innerHTML);
-                titles = localStorage.getItem("titles");
-
-                if (titles == null) {
-                    titles = [];
-                } else {
-                    titles = JSON.parse(titles);
-                }
-                titles.push(title);
-                localStorage.setItem("titles", JSON.stringify(titles));
-                var htmlData = "<a onclick=showData('" + title + "')>" + title + "</a><br>";
-                $("#Contentable").append(htmlData);
-                var userVersion = editElem.innerHTML;
-                localStorage.setItem("userEdits", userVersion);
-                editElem.innerHTML = "";
-            });
-        });
-
-        function showData(txt) {
-            editElem.innerHTML = localStorage.getItem(txt);
-        }
-    </script>
-</body>
-
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        Let's test JS
+        <script src="subends.js"></script>
+    </body>
 </html>

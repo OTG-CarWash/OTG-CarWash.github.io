@@ -22,7 +22,7 @@
       <div class="logdiv">
         <main class="form-signin">
           <br/>
-          <h4>OTG Car Wash Jaipur</h4>
+          <h4>OTG Car Wash Jaipur | Home</h4>
           <form>
             <img class="mb-4" src="assets/img/logo.png" alt="" width="200" height="150">
             <h2 class="h3 mb-3 fw-normal">Please sign in</h2>
@@ -31,7 +31,7 @@
             <label for="inputPassword" class="visually-hidden">Password</label>
             <input id="password_field" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <button class="w-100 btn btn-lg btn-primary" onclick="login()" type="button">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
+            <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
           </form>
         </main>
       </div>
@@ -45,47 +45,87 @@
         data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+      
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
           <a class="nav-link" onclick="logout()">Sign out</a>
         </li>
       </ul>
     </header>
-    <ul class="list-group">
-      <li class="list-group-item">Your Orders</li>
-      <li class="list-group-item">
-        <p class="alert alert-info ">Press ctrl+F and type in the order ID to search for any particular Order.
-        </p>
-      </li>
-      <li class="list-group-item">
-        <div class="page-wrapper">
-          <center>
-            <div class="table-responsive">
-              <table class="table">
-                <thead class="table-dark">
-                  <tr>
-                    <th scope="col">Order #</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Contact</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Invoice</th>
-                    <th scope="col">Assigned To</th>
-                    <!-- <th scope="col">Assigned Status</th> -->
-                    </tr>
-                  </tr>
-                </thead>
-                <tbody id="data">
-                </tbody>
-              </table>
-            </div>
-        </div>
+    <br/>
+    <p class="alert alert-info ">Press ctrl+F and type in the order ID to search for any particular Order.</p>
+    <ul style="margin-left: 0.5em; margin-right: 0.5em;" class=" list-group">
 
-      </li>
-    </ul>
-    </center>
-  </div>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="home"
+            aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="profile"
+            aria-selected="false">Ending Date Subscriptions</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="home-tab">
+          <li class="list-group-item">
+            <div class="page-wrapper">
+              <center>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">Order #</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Invoice</th>
+                        <th scope="col">Assigned To</th>
+                        <!-- <th scope="col">Assigned Status</th> -->
+                      </tr>
+                      </tr>
+                    </thead>
+                    <tbody id="data">
+                    </tbody>
+                  </table>
+                </div>
+              </center>
+            </div>
+          </li>
+        </div>
+        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="profile-tab">
+          <center>
+            <li class="list-group-item">
+              <div class="page-wrapper">
+                <center>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class="table-dark">
+                        <tr>
+                          <th scope="col">Order #</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Contact</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Ending Date</th>
+                          <th scope="col">Invoice</th>
+                          <th scope="col">Assigned To</th>
+                          <!-- <th scope="col">Assigned Status</th> -->
+                        </tr>
+                        </tr>
+                      </thead>
+                      <tbody id="dates">
+                      </tbody>
+                    </table>
+                  </div>
+                </center>
+              </div>
+            </li>
+          </center>
+        </div>
+      </div>
 
   <div id="receipt-modal" class="modal">
     <!-- Modal content -->
@@ -238,5 +278,14 @@
   <script src="../dashboard/js/init-firebase.js"></script>
   <script src="../dashboard/js/index.js"></script>
   <script src="../dashboard/js/db-server.js"></script>
+  <script src="../dashboard/js/subends.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

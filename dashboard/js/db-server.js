@@ -9,10 +9,11 @@ query.onSnapshot(function (querySnapshot) {
         if (change.type === "added") {
             var orderId = change.doc.data().orderId;
             var docId = change.doc.data().docId;
+            var timestamp = change.doc.data().timestamp;
             var amount = change.doc.data().amount;
             var contact = change.doc.data().contact;
             var username = change.doc.data().name;
-            var timestamp = change.doc.data().timestamp;
+            
             var assignedTo = change.doc.data().assignTo;
 
             table.innerHTML += "<tr><td id='order-id'>" + orderId + "</td>" +
@@ -20,14 +21,13 @@ query.onSnapshot(function (querySnapshot) {
                 "<td>" + contact + "</td>" +
                 "<td>" + amount / 100 + "</td>" +
                 "<td>" + timestamp.toDate().toLocaleDateString() + "</td>" +
-                `<td><button class="btn btn-dark" id='myBtn' onclick="on('${docId}')">view & assign</button></td>` +
+                `<td><button class="btn btn-dark" id='myBtn' onclick="display_receipt('${docId}')">view & assign</button></td>` +
                 `<td id="assignedCell">${assignedTo}</td></tr>`;
         }
-        
     });
 });
 
-function on(userId) {
+function display_receipt(userId) {
     console.log(userId);
     // Get the modal
     var modal = document.getElementById("receipt-modal");
