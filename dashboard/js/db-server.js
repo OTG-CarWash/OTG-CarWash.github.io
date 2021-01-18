@@ -150,6 +150,54 @@ function openModal(id) {
     }
 }
 
+function cancel() {
+    var order = window.prompt("Enter the Order ID");
+    db.collection("portal").where("orderId", "==", order).get().then(function(querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            var docid = doc.data().docId;
+            var uid = doc.data().uid;
+            db.collection("portal").doc(docid).update({
+                cancelled: true,
+            });
+            db.collection("transactions").doc(uid).collection("allTransaction").doc(docid).update({
+                cancelled: true,
+            }).then(function () {
+                console.log("cancelled");
+            }).catch(function(error) {
+                console.error("Error in cancelling in transaction");
+            });
+        });
+    }).catch(function(error){
+        console.error("error in cancelling in portal");
+    })
+    // db.collection("portal").where("orderId", "==", order)
+    //     .get()
+    //     .then(function (querySnapshot) {
+    //         querySnapshot.forEach(function (doc) {
+    //             var docid = doc.data().docId;
+    //             var uid = doc.data().uid;
+
+    //             db.collection("transactions").doc(uid).collection("allTransaction").where("docId", "==", docid).get()
+    //                 .then(function (querySnapshot) {
+    //                 db.collection("portal").doc(id).update({
+    //                         cancelled: true,
+    //                     })
+    //                     .then(function () {
+                            
+    //                         console.log("Document successfully written!");
+    //                     })
+    //                     .catch(function (error) {
+    //                         console.error("Error writing document: ", error);
+    //                     });
+    //             }
+    //         });
+
+    //     })
+    //     .catch(function (error) {
+    //         console.log("Error getting documents: ", error);
+    //     });
+    //     window.alert("Subscription for this Order Cancelled. Don't forget to refund the amount!");  
+}
 /*
 db.collection("portal").onSnapshot(function (querySnapshot) {
     querySnapshot.forEach(function (doc) {
