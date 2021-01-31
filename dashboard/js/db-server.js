@@ -1,31 +1,46 @@
 var db = firebase.firestore();
-var query = db.collection("portal").orderBy("timestamp", "desc");
+var query = db.collection("portal");
 const table = document.getElementById('data');
 
-
-query.onSnapshot(function (querySnapshot) {
+query.orderBy("timestamp", "desc").onSnapshot(function (querySnapshot) {
     querySnapshot.docChanges().forEach(function (change) {
-    
+        var orderId = change.doc.data().orderId;
+        var docId = change.doc.data().docId;
+        var timestamp = change.doc.data().timestamp;
+        var amount = change.doc.data().amount;
+        var contact = change.doc.data().contact;
+        var username = change.doc.data().name;
+        var status = change.doc.data().success
+        var assignedTo = change.doc.data().assignTo;
         if (change.type === "added") {
-            var orderId = change.doc.data().orderId;
-            var docId = change.doc.data().docId;
-            var timestamp = change.doc.data().timestamp;
-            var amount = change.doc.data().amount;
-            var contact = change.doc.data().contact;
-            var username = change.doc.data().name;
             
-            var assignedTo = change.doc.data().assignTo;
 
+            if (status === false) {
+                status = "× Payment Failed";
+                db.collection("portal").doc(docId).update({
+                        assignTo: "Payment Failed"
+                    })
+                    .then(function () {
+                        console.log("Document successfully written!");
+                    })
+                    .catch(function (error) {
+                        console.error("Error writing document: ", error);
+                    });
+            } else {
+                status = "️✔ PAID";
+            }
             table.innerHTML += "<tr><td id='order-id'>" + orderId + "</td>" +
-                "<td>" + username + "</td>" +
+                `<td> ${username}</td>` +
                 "<td>" + contact + "</td>" +
                 "<td>" + amount / 100 + "</td>" +
                 "<td>" + timestamp.toDate().toLocaleDateString() + "</td>" +
-                `<td><button class="btn btn-dark" id='myBtn' onclick="display_receipt('${docId}')">view & assign</button></td>` +
-                `<td id="assignedCell">${assignedTo}</td></tr>`;
+                `<td><div class="btn btn-dark" id='myBtn' onclick="display_receipt('${docId}')">🧾</div></td>` +
+                `<td id="assignedCell">${assignedTo}</td>` +
+                `<td id="statusPay">${status}</td></tr>`;
         }
     });
 });
+
 
 function display_receipt(userId) {
     console.log(userId);
@@ -169,39 +184,5 @@ function cancel() {
         });
     }).catch(function(error){
         console.error("error in cancelling in portal");
-    })
-    // db.collection("portal").where("orderId", "==", order)
-    //     .get()
-    //     .then(function (querySnapshot) {
-    //         querySnapshot.forEach(function (doc) {
-    //             var docid = doc.data().docId;
-    //             var uid = doc.data().uid;
-
-    //             db.collection("transactions").doc(uid).collection("allTransaction").where("docId", "==", docid).get()
-    //                 .then(function (querySnapshot) {
-    //                 db.collection("portal").doc(id).update({
-    //                         cancelled: true,
-    //                     })
-    //                     .then(function () {
-                            
-    //                         console.log("Document successfully written!");
-    //                     })
-    //                     .catch(function (error) {
-    //                         console.error("Error writing document: ", error);
-    //                     });
-    //             }
-    //         });
-
-    //     })
-    //     .catch(function (error) {
-    //         console.log("Error getting documents: ", error);
-    //     });
-    //     window.alert("Subscription for this Order Cancelled. Don't forget to refund the amount!");  
+    })  
 }
-/*
-db.collection("portal").onSnapshot(function (querySnapshot) {
-    querySnapshot.forEach(function (doc) {
-        console.log(doc.id + " -> " + doc.data());
-    });
-});
-*/

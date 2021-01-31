@@ -53,7 +53,18 @@
       </ul>
     </header>
     <br/>
-    <p class="alert alert-info ">Press ctrl+F and type in the order ID to search for any particular Order.</p>
+    <p class="alert alert-info">Press ctrl+F and type in the order ID to search for any
+      particular Order.
+      <button onclick="foo()" style="float: right;" class="">Refresh</button>
+      </p>
+
+      <script>
+        function foo() {
+          location.reload();
+        }
+      </script>
+      
+
     <ul style="margin-left: 0.5em; margin-right: 0.5em;" class=" list-group">
 
       <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -83,7 +94,7 @@
                         <th scope="col">Date</th>
                         <th scope="col">Invoice</th>
                         <th scope="col">Assigned To</th>
-                        <!-- <th scope="col">Assigned Status</th> -->
+                        <th scope="col">Payment Status</th>
                       </tr>
                       </tr>
                     </thead>
@@ -317,7 +328,7 @@
 
   <!--This page JavaScript -->
   <!--chartis chart-->
-  <!-- <script src="./portal/assets/libs/chartist/dist/chartist.min.js"></script> -->
+  <!-- <scrip src="./portal/assets/libs/chartist/dist/chartist.min.js"></scrip> -->
   <!-- <script src="./portal/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script> -->
   <!-- <script src="./portal/dist/js/pages/dashboards/dashboard1.js"></script> -->
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
