@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./dashboard/css/login.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
   </script>
 </head>
@@ -55,7 +55,7 @@
     <br/>
     <p class="alert alert-info">Press ctrl+F and type in the order ID to search for any
       particular Order.
-      <button onclick="foo()" style="float: right;" class="">Refresh</button>
+      <button onclick="foo()" class="btn-sm" type="button" style="float: right;">Refresh</button>
       </p>
 
       <script>
@@ -259,83 +259,11 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-  /*
-  <!-- <div class="row align-items-start">
-    <div class="col">
-      <h5>ORDER PLACED ON:</h5>
-      <p id="order-date"></p>
-      <h5>TIME: </h5>
-      <p id="order-time"></p>
-    </div>
-    <div class="col">
-      <h5>CAR NAME:</h5>
-      <p id="order-carName"></p>
-      <h5>CAR NUMBER:</h5>
-      <p id="order-carNumber"></p>
-    </div>
-    <div class="col">
-      <div style="display: flex;">
-      <div>PAYMENT STATUS:</div>
-      <button id="order-status"></button>
-      </div>
-      <br/>
-      <h5>CONTACT:</h5>
-      <p id="order-contact"></p>
-    </div>
-  </div>
-  <div class="row align-items-center">
-    <div class="col">
-      <h5>NAME:</h5>
-      <p id="order-name"></p>
-    </div>
-    <div class="col">
-      <h5>CAR MODEL:</h5>
-      <p id="order-carModel"></p>
-    </div>
-    <div class="col">
-      <h5>AMOUNT:</h5>
-      <p id="order-amount"></p>
-    </div>
-  </div>
-  <div class="row align-items-end">
-    <div class="col">
-      <h5>ADDRESS:</h5>
-      <p id="order-address"></p>
-    </div>
-    <div class="col">
-      <h5>PIN CODE:</h5>
-      <p id="order-pinCode"></p>
-    </div>
-    <div class="col">
-      <h5>TRANSACTION ID:</h5>
-      <p id="order-transactionId"></p>
-    </div>
-  </div> -->
-  
-  */
-
-
-
-
-
-
-  <!--This page JavaScript -->
-  <!--chartis chart-->
-  <!-- <scrip src="./portal/assets/libs/chartist/dist/chartist.min.js"></scrip> -->
-  <!-- <script src="./portal/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script> -->
-  <!-- <script src="./portal/dist/js/pages/dashboards/dashboard1.js"></script> -->
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
-  <script src="../dashboard/js/init-firebase.js"></script>
-  <script src="../dashboard/js/index.js"></script>
-  <script src="../dashboard/js/db-server.js"></script>
-  <script src="../dashboard/js/subends.js"></script>
+  <script async src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
+  <script async src="../dashboard/js/init-firebase.js"></script>
+  <script async src="../dashboard/js/index.js"></script>
+  <script async src="../dashboard/js/db-server.js"></script>
+  <script async src="../dashboard/js/subends.js"></script>
 </body>
 </html>
 

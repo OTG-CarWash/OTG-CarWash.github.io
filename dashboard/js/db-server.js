@@ -1,8 +1,8 @@
 var db = firebase.firestore();
-var query = db.collection("portal");
+var query = db.collection("portal").orderBy("timestamp", "desc");
 const table = document.getElementById('data');
 
-query.orderBy("timestamp", "desc").onSnapshot(function (querySnapshot) {
+query.onSnapshot(function (querySnapshot) {
     querySnapshot.docChanges().forEach(function (change) {
         var orderId = change.doc.data().orderId;
         var docId = change.doc.data().docId;
